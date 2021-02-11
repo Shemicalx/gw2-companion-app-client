@@ -15,7 +15,7 @@ function Nav(props) {
               <Link style={linkStyle} to='/'>Home</Link>
             </li>
             <li>
-              <Link style={linkStyle} to='/profile'>Profile</Link>
+              <Link style={linkStyle} to='/dailyRoutine'>Daily Routine</Link>
             </li>
             <li>
               <Link style={linkStyle} to='/info'>Account Information</Link>

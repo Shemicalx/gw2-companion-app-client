@@ -1,14 +1,22 @@
+:root {
+  font-size: 16px;
+  --sidebar-width: 300px;
+}
+
 body{ 
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 .App {
+  text-align: center;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
+  width: 100%;
   background-color: #224;
 }
 
@@ -25,8 +33,82 @@ li {
 .App__MainSection {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
+  min-height: inherit;
+  width: 100%;
+  margin-right: var(--sidebar-width);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.DailyRoutine{
+  width: 60%;
+  min-width: 732px;
+}
+
+.DailyRoutine__RoutineContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #33334499;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.DailyRoutine__Title {
+  margin-top: 2rem;
+}
+
+.DailyRoutine__RoutineAddButton {
+  /* border-radius: 1rem; */
+  cursor: pointer;
+}
+
+.DailyRoutine__RoutineAddButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  height: 0.3rem;
+  width: 10vh;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.DailyRoutine__RoutineAddButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  height: 10vh;
+  width: 0.3rem;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.DailyRoutine__Item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff10;
+  height: 20vh;
   width: 100%;
 }
